@@ -9,7 +9,7 @@ $ ('#generatingButton').on('click', makeDiv);
 
 $('#insertionPoint').on('click','.remove', removeButton);
 
-// $ ('#insertionPoint').on('click', '.yellowButton' makeYellow);
+$ ('#insertionPoint').on('click', '.yellowButton', makeYellow);
 
 }
 
@@ -19,11 +19,11 @@ let numberOfClicks = 0;
 
 function makeDiv(event){
     event.preventDefault();
-//add to the clicks number
+    //add to the clicks number
     numberOfClicks ++;
     console.log(numberOfClicks);
- console.log('makeDiv is running');
-let addAnElement = `
+    console.log('makeDiv is running');
+    let addAnElement = `
         <div class = "divHere">
             <p class = "clicksCalculated">${numberOfClicks}</p>
             <button class = "yellowButton">Yellow</button>
@@ -45,15 +45,21 @@ $('#insertionPoint').append(addAnElement);
             //         <button class = "remove">
             //         X
             //     </button>
-            //     </td>
+}          //     </td>
             // </tr>;
-// function makeYellow(){
+function makeYellow(){
+    $('.yellowButton').removeClass('divHere');
+    Element.classList.add('divHereYellow');
+    
+}
+
+
 // '.divHere'.css({
 //     "background-color": "yellow",
 //     "color": "white"
 //   });
 
-}
+
 
 // if (makeYellow) {
 //     '.divHere'.css({
