@@ -26,14 +26,14 @@ function makeDiv(event){
     let addAnElement = `
         <div class = "divHere">
             <p class = "clicksCalculated">${numberOfClicks}</p>
-            <button class = "yellowButton">Yellow</button>
+            <button class = "yellowButton">Make me Yellow!</button>
             <button class = "remove">Delete</button>
         </div>
 
 `
 
 $('#insertionPoint').append(addAnElement);
-
+}
 
             // <tr id="insertionPoint">
             //     <td class="firstNameStyle">${firstNameInput}</td>
@@ -45,13 +45,19 @@ $('#insertionPoint').append(addAnElement);
             //         <button class = "remove">
             //         X
             //     </button>
-}          //     </td>
+        //     </td>
             // </tr>;
+
+
+
 function makeYellow(){
-    $('.yellowButton').removeClass('divHere');
-    Element.classList.add('divHereYellow');
-    
+    $('.divHere').addClass('divHereYellow');
 }
+            // function makeYellow(){
+//     $('.yellowButton').removeClass('divHere');
+//     Element.classList.add('divHereYellow');
+    
+// }
 
 
 // '.divHere'.css({
